@@ -47,7 +47,7 @@ class Wadm
 	/**
 	 * Plugin version
 	 */
-	const VERSION = '1.4';
+	const VERSION = '1.5';
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
