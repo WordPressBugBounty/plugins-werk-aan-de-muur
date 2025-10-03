@@ -56,15 +56,8 @@ msgid "Connection settings"
 msgstr "Paramètres de connexion"
 
 #: admin/class-wadm-admin.php:276
-msgid ""
-"Your personal API key and artist ID can be found on your <a href=\"http://"
-"www.werkaandemuur.nl/nl/Wordpress-plugin/474\">Werk aan de Muur dashboard</"
-"a>. Please note you`ll have to be logged in to open this page."
-msgstr ""
-"Votre clé API personnelle et votre ID d’artiste se trouvent sur votre "
-"tableau de bord <a href=“http://www.artheroes.fr/fr/Wordpress-"
-"plugin/474”>Art Heroes</a>. Veuillez noter que vous devez être connecté pour "
-"ouvrir cette page."
+msgid "Your personal API key and artist ID can be found on your <a href=\"http://www.werkaandemuur.nl/nl/Wordpress-plugin/474\">Werk aan de Muur dashboard</a>. Please note you'll have to be logged in to open this page."
+msgstr "Votre clé API personnelle et votre ID d'artiste se trouvent sur votre tableau de bord <a href=\"http://www.artheroes.fr/fr/Wordpress-plugin/474\">Art Heroes</a>. Veuillez noter que vous devez être connecté pour ouvrir cette page."
 
 #: includes/class-wadm-feed-artwork.php:45
 msgid "Koop &quot;%s&quot; op Werk aan de Muur"

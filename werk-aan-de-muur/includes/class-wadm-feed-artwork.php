@@ -41,12 +41,12 @@ class Wadm_Feed_Artwork extends Wadm_Feed_Abstract
 					</a>
 				</p>
 			</div>',
-			$artwork->link,
-			sprintf(__('Koop &quot;%s&quot; op Werk aan de Muur', Wadm::TEXT_DOMAIN), htmlentities($artwork->title)),
-			$this->getImageUrl($artwork, '950x600'),
-			htmlentities($artwork->title),
-			__('Te koop op meerdere materialen in een zelfgekozen formaat', Wadm::TEXT_DOMAIN),
-			sprintf(__('%s <strong>%s</strong> voor <strong>%s</strong>', Wadm::TEXT_DOMAIN), $artwork->medium, $artwork->dimensions, $artwork->pricing[0])
+			esc_url($artwork->link),
+			esc_attr(sprintf(__('Koop "%s" op Werk aan de Muur', Wadm::TEXT_DOMAIN), $artwork->title)),
+			esc_url($this->getImageUrl($artwork, '950x600')),
+			esc_attr($artwork->title),
+			esc_html(__('Te koop op meerdere materialen in een zelfgekozen formaat', Wadm::TEXT_DOMAIN)),
+			sprintf(__('%s <strong>%s</strong> voor <strong>%s</strong>', Wadm::TEXT_DOMAIN), esc_html($artwork->medium), esc_html($artwork->dimensions), wp_kses_post($artwork->pricing[0]))
 		);
 
 		return parent::getHtml($output);

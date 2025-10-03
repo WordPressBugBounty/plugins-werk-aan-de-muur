@@ -4,7 +4,7 @@ Donate link: https://www.werkaandemuur.nl/
 Tags: wadm, art, werk aan de muur, oh my prints, art heroes
 Requires at least: 3.0.1
 Tested up to: 6.7.1
-Stable tag: 1.5
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,11 @@ Please contact us at info@werkaandemuur.nl with any questions or suggestions. We
 1. Example screenshot of an artlist.
 
 == Changelog ==
+
+= 1.5.1 =
+
+* Add security fixes
+* Resolved escaped quotes in translation strings
 
 = 1.5 =
 

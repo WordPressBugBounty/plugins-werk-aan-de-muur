@@ -86,12 +86,12 @@ class Wadm_Admin_Setting
 		$attributesString = '';
 
 		foreach ($attributes as $key => $value)
-			$attributesString .= ' ' . $key . '="' . $value . '"';
+			$attributesString .= ' ' . esc_attr($key) . '="' . esc_attr($value) . '"';
 
 		echo '<input' . $attributesString . '>';
 
 		if (isset($this->_description))
-			echo '<p class="description" id="' . $this->_settingName . '-description">' . $this->_description . '</p>';
+			echo '<p class="description" id="' . esc_attr($this->_settingName) . '-description">' . wp_kses_post($this->_description) . '</p>';
 	}
 
 	/**
@@ -99,6 +99,20 @@ class Wadm_Admin_Setting
 	 */
 	protected function _register()
 	{
-		register_setting($this->_pluginName, $this->_settingName);
+		register_setting($this->_pluginName, $this->_settingName, [
+			'sanitize_callback' => [$this, 'sanitize']
+		]);
+	}
+
+	/**
+	 * Sanitize user input before saving
+	 */
+	public function sanitize($input)
+	{
+		if (isset($this->_validationOptions['type']) && $this->_validationOptions['type'] === 'number') {
+			return absint($input);
+		}
+
+		return sanitize_text_field($input);
 	}
 }

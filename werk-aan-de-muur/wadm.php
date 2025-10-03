@@ -16,7 +16,7 @@
  * Plugin Name:       Werk aan de Muur
  * Plugin URI:        https://nl.wordpress.org/plugins/werk-aan-de-muur/
  * Description:       Use this plugin to display artworks on your own Wordpress site.
- * Version:           1.5
+ * Version:           1.5.1
  * Author:            Sander van Leeuwen
  * Author URI:        https://www.werkaandemuur.nl/
  * License:           GPL-2.0+

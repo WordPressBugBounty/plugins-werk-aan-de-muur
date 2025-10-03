@@ -144,7 +144,7 @@ class Wadm_Admin {
 		}
 		catch (Exception $e)
 		{
-			$notice = new Wadm_Admin_Notice(sprintf(__('<strong>Important: </strong> The Werk aan de Muur plugin can\'t connect to the outside world. Please make sure that your server is able to reach "%s".', Wadm::TEXT_DOMAIN), $connectionTest->getUrl()), 'error');
+			$notice = new Wadm_Admin_Notice(sprintf(__('<strong>Important: </strong> The Werk aan de Muur plugin can\'t connect to the outside world. Please make sure that your server is able to reach "%s".', Wadm::TEXT_DOMAIN), esc_html($connectionTest->getUrl())), 'error');
 			$notice->add();
 
 			return false;

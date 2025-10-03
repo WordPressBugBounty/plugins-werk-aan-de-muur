@@ -138,21 +138,21 @@ class Wadm_Feed_Paged extends Wadm_Feed_Abstract
 		return '
 			<li class="wadm-artwork">
 				<div class="wadm-artwork-art">
-					<a href="' . $artwork->link . '" class="wadm-artwork-link" title="' . htmlentities($artwork->title) . '" target="_blank" rel="nofollow">
-						<img src="' . $this->getImageUrl($artwork, '500x500') . '" alt="' . htmlentities($artwork->title) . '" />
+					<a href="' . esc_url($artwork->link) . '" class="wadm-artwork-link" title="' . esc_attr($artwork->title) . '" target="_blank" rel="nofollow">
+						<img src="' . esc_url($this->getImageUrl($artwork, '500x500')) . '" alt="' . esc_attr($artwork->title) . '" />
 					</a>
 				</div>
 
 				<div class="wadm-artwork-meta">
 					<div class="wadm-artwork-title">
-						<a href="' . $artwork->link . '" class="wadm-artwork-link" title="' . htmlentities($artwork->title) . '" target="_blank" rel="nofollow">
-							<span class="primary-item">' . $artwork->title . '</span>
-							' . (isset($artwork->artist) ? '<span class="secondary-item">' . $artwork->artist . '</span>' : '') . '
+						<a href="' . esc_url($artwork->link) . '" class="wadm-artwork-link" title="' . esc_attr($artwork->title) . '" target="_blank" rel="nofollow">
+							<span class="primary-item">' . esc_html($artwork->title) . '</span>
+							' . (isset($artwork->artist) ? '<span class="secondary-item">' . esc_html($artwork->artist) . '</span>' : '') . '
 						</a>
 					</div>
 					<p class="wadm-artwork-price">
-						<a href="' . $artwork->link . '" class="wadm-artwork-link" title="' . htmlentities($artwork->title) . '" target="_blank" rel="nofollow">
-							<span>' . $artwork->pricing[0] . '</span> ' . $artwork->medium . ' ' . $artwork->dimensions . '
+						<a href="' . esc_url($artwork->link) . '" class="wadm-artwork-link" title="' . esc_attr($artwork->title) . '" target="_blank" rel="nofollow">
+							<span>' . wp_kses_post($artwork->pricing[0]) . '</span> ' . esc_html($artwork->medium) . ' ' . esc_html($artwork->dimensions) . '
 						</a>
 					</p>
 				</div>
